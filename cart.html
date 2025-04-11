@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <style>
+    /* === Reset & base styles === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* === Table styles === */
+    table {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    thead {
+      background-color: #f4f4f4;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    th {
+      font-weight: bold;
+      color: #333;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* === Button styling inside table === */
+    .remove-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .remove-btn:hover {
+      background-color: #c0392b;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      table {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Cart</h1>
+  <table id="cartTable">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Cart rows will be inserted here dynamically -->
+    </tbody>
+  </table>
+
+  <script src="cart.js"></script>
+</body>
+</html>
